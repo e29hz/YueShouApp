@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4051EF91D0E5EA000A9F142 /* YSPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSPrefixHeader.pch; sourceTree = "<group>"; };
 		E4957CE21D0E57E40016FB61 /* YueShouApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueShouApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4957CE61D0E57E40016FB61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4957CE81D0E57E40016FB61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 				E4957CF31D0E57E50016FB61 /* LaunchScreen.storyboard */,
 				E4957CF61D0E57E50016FB61 /* Info.plist */,
 				E4957CE61D0E57E40016FB61 /* main.m */,
+				E4051EF91D0E5EA000A9F142 /* YSPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -670,6 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = /Users/ehongzhen/Documents/YueShouApp/YueShouApp/YSPrefixHeader.pch;
 				INFOPLIST_FILE = YueShouApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoke.YueShouApp;
@@ -682,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = /Users/ehongzhen/Documents/YueShouApp/YueShouApp/YSPrefixHeader.pch;
 				INFOPLIST_FILE = YueShouApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoke.YueShouApp;
@@ -754,6 +758,7 @@
 				E4957D111D0E57E50016FB61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4957D121D0E57E50016FB61 /* Build configuration list for PBXNativeTarget "YueShouAppTests" */ = {
 			isa = XCConfigurationList;
@@ -762,6 +767,7 @@
 				E4957D141D0E57E50016FB61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4957D151D0E57E50016FB61 /* Build configuration list for PBXNativeTarget "YueShouAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -770,6 +776,7 @@
 				E4957D171D0E57E50016FB61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

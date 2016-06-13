@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"约手网";
+    self.navigationItem.title = @"00";
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self setUpView];

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "YSRootViewController.h"
+#import "MMDrawerController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [_window setBackgroundColor:[UIColor whiteColor]];
+    
+    [_window makeKeyAndVisible];
+    
+    YSRootViewController *rootVC = [[YSRootViewController alloc] init];
+    [_window setRootViewController:rootVC];
+    
     return YES;
 }
 

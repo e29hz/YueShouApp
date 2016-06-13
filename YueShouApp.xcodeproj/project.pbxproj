@@ -9,12 +9,23 @@
 /* Begin PBXBuildFile section */
 		E4957CE71D0E57E40016FB61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957CE61D0E57E40016FB61 /* main.m */; };
 		E4957CEA1D0E57E40016FB61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957CE91D0E57E40016FB61 /* AppDelegate.m */; };
-		E4957CED1D0E57E40016FB61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957CEC1D0E57E40016FB61 /* ViewController.m */; };
 		E4957CF01D0E57E50016FB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4957CEE1D0E57E50016FB61 /* Main.storyboard */; };
 		E4957CF21D0E57E50016FB61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4957CF11D0E57E50016FB61 /* Assets.xcassets */; };
 		E4957CF51D0E57E50016FB61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4957CF31D0E57E50016FB61 /* LaunchScreen.storyboard */; };
 		E4957D001D0E57E50016FB61 /* YueShouAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957CFF1D0E57E50016FB61 /* YueShouAppTests.m */; };
 		E4957D0B1D0E57E50016FB61 /* YueShouAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D0A1D0E57E50016FB61 /* YueShouAppUITests.m */; };
+		E4957D4E1D0E598D0016FB61 /* CollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D411D0E598D0016FB61 /* CollectionImageCell.m */; };
+		E4957D4F1D0E598D0016FB61 /* CollectionImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D431D0E598D0016FB61 /* CollectionImageView.m */; };
+		E4957D501D0E598D0016FB61 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D461D0E598D0016FB61 /* MMDrawerBarButtonItem.m */; };
+		E4957D511D0E598D0016FB61 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D491D0E598D0016FB61 /* MMDrawerController.m */; };
+		E4957D521D0E598D0016FB61 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D4B1D0E598D0016FB61 /* MMDrawerVisualState.m */; };
+		E4957D531D0E598D0016FB61 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D4D1D0E598D0016FB61 /* UIViewController+MMDrawerController.m */; };
+		E4957D561D0E59BF0016FB61 /* YSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D551D0E59BF0016FB61 /* YSRootViewController.m */; };
+		E4957D591D0E5A8B0016FB61 /* YSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D581D0E5A8B0016FB61 /* YSHomeViewController.m */; };
+		E4957D5C1D0E5A9C0016FB61 /* YSHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D5B1D0E5A9C0016FB61 /* YSHotViewController.m */; };
+		E4957D5F1D0E5AA80016FB61 /* YSShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D5E1D0E5AA80016FB61 /* YSShopViewController.m */; };
+		E4957D621D0E5ACA0016FB61 /* YSMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D611D0E5ACA0016FB61 /* YSMyViewController.m */; };
+		E4957D651D0E5C5D0016FB61 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957D641D0E5C5D0016FB61 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +48,8 @@
 /* Begin PBXFileReference section */
 		E4957CE21D0E57E40016FB61 /* YueShouApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueShouApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4957CE61D0E57E40016FB61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E4957CE81D0E57E40016FB61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E4957CE91D0E57E40016FB61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E4957CEB1D0E57E40016FB61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4957CEC1D0E57E40016FB61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E4957CE81D0E57E40016FB61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		E4957CE91D0E57E40016FB61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		E4957CEF1D0E57E50016FB61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4957CF11D0E57E50016FB61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4957CF41D0E57E50016FB61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +60,31 @@
 		E4957D061D0E57E50016FB61 /* YueShouAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YueShouAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4957D0A1D0E57E50016FB61 /* YueShouAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YueShouAppUITests.m; sourceTree = "<group>"; };
 		E4957D0C1D0E57E50016FB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4957D401D0E598D0016FB61 /* CollectionImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionImageCell.h; sourceTree = "<group>"; };
+		E4957D411D0E598D0016FB61 /* CollectionImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionImageCell.m; sourceTree = "<group>"; };
+		E4957D421D0E598D0016FB61 /* CollectionImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionImageView.h; sourceTree = "<group>"; };
+		E4957D431D0E598D0016FB61 /* CollectionImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionImageView.m; sourceTree = "<group>"; };
+		E4957D451D0E598D0016FB61 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		E4957D461D0E598D0016FB61 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		E4957D471D0E598D0016FB61 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		E4957D481D0E598D0016FB61 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		E4957D491D0E598D0016FB61 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		E4957D4A1D0E598D0016FB61 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		E4957D4B1D0E598D0016FB61 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		E4957D4C1D0E598D0016FB61 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		E4957D4D1D0E598D0016FB61 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		E4957D541D0E59BF0016FB61 /* YSRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSRootViewController.h; sourceTree = "<group>"; };
+		E4957D551D0E59BF0016FB61 /* YSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSRootViewController.m; sourceTree = "<group>"; };
+		E4957D571D0E5A8B0016FB61 /* YSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeViewController.h; sourceTree = "<group>"; };
+		E4957D581D0E5A8B0016FB61 /* YSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeViewController.m; sourceTree = "<group>"; };
+		E4957D5A1D0E5A9C0016FB61 /* YSHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHotViewController.h; sourceTree = "<group>"; };
+		E4957D5B1D0E5A9C0016FB61 /* YSHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHotViewController.m; sourceTree = "<group>"; };
+		E4957D5D1D0E5AA80016FB61 /* YSShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSShopViewController.h; sourceTree = "<group>"; };
+		E4957D5E1D0E5AA80016FB61 /* YSShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSShopViewController.m; sourceTree = "<group>"; };
+		E4957D601D0E5ACA0016FB61 /* YSMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSMyViewController.h; sourceTree = "<group>"; };
+		E4957D611D0E5ACA0016FB61 /* YSMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSMyViewController.m; sourceTree = "<group>"; };
+		E4957D631D0E5C5D0016FB61 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		E4957D641D0E5C5D0016FB61 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +135,11 @@
 		E4957CE41D0E57E40016FB61 /* YueShouApp */ = {
 			isa = PBXGroup;
 			children = (
-				E4957CE81D0E57E40016FB61 /* AppDelegate.h */,
-				E4957CE91D0E57E40016FB61 /* AppDelegate.m */,
-				E4957CEB1D0E57E40016FB61 /* ViewController.h */,
-				E4957CEC1D0E57E40016FB61 /* ViewController.m */,
-				E4957CEE1D0E57E50016FB61 /* Main.storyboard */,
-				E4957CF11D0E57E50016FB61 /* Assets.xcassets */,
-				E4957CF31D0E57E50016FB61 /* LaunchScreen.storyboard */,
-				E4957CF61D0E57E50016FB61 /* Info.plist */,
+				E4957D181D0E584F0016FB61 /* Home */,
+				E4957D1E1D0E584F0016FB61 /* Hot */,
+				E4957D321D0E584F0016FB61 /* Shop */,
+				E4957D241D0E584F0016FB61 /* My */,
+				E4957D2A1D0E584F0016FB61 /* Others */,
 				E4957CE51D0E57E40016FB61 /* Supporting Files */,
 			);
 			path = YueShouApp;
@@ -117,6 +148,10 @@
 		E4957CE51D0E57E40016FB61 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4957CEE1D0E57E50016FB61 /* Main.storyboard */,
+				E4957CF11D0E57E50016FB61 /* Assets.xcassets */,
+				E4957CF31D0E57E50016FB61 /* LaunchScreen.storyboard */,
+				E4957CF61D0E57E50016FB61 /* Info.plist */,
 				E4957CE61D0E57E40016FB61 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +173,212 @@
 				E4957D0C1D0E57E50016FB61 /* Info.plist */,
 			);
 			path = YueShouAppUITests;
+			sourceTree = "<group>";
+		};
+		E4957D181D0E584F0016FB61 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D191D0E584F0016FB61 /* Controller */,
+				E4957D1C1D0E584F0016FB61 /* Model */,
+				E4957D1D1D0E584F0016FB61 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E4957D191D0E584F0016FB61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D571D0E5A8B0016FB61 /* YSHomeViewController.h */,
+				E4957D581D0E5A8B0016FB61 /* YSHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4957D1C1D0E584F0016FB61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4957D1D1D0E584F0016FB61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4957D1E1D0E584F0016FB61 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D1F1D0E584F0016FB61 /* Controller */,
+				E4957D221D0E584F0016FB61 /* Model */,
+				E4957D231D0E584F0016FB61 /* View */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		E4957D1F1D0E584F0016FB61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D5A1D0E5A9C0016FB61 /* YSHotViewController.h */,
+				E4957D5B1D0E5A9C0016FB61 /* YSHotViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4957D221D0E584F0016FB61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4957D231D0E584F0016FB61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4957D241D0E584F0016FB61 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D251D0E584F0016FB61 /* Controller */,
+				E4957D281D0E584F0016FB61 /* Model */,
+				E4957D291D0E584F0016FB61 /* View */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		E4957D251D0E584F0016FB61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D601D0E5ACA0016FB61 /* YSMyViewController.h */,
+				E4957D611D0E5ACA0016FB61 /* YSMyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4957D281D0E584F0016FB61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4957D291D0E584F0016FB61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4957D2A1D0E584F0016FB61 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				E4957CE81D0E57E40016FB61 /* AppDelegate.h */,
+				E4957CE91D0E57E40016FB61 /* AppDelegate.m */,
+				E4957D3E1D0E591A0016FB61 /* Tools */,
+				E4957D2D1D0E584F0016FB61 /* Category */,
+				E4957D2E1D0E584F0016FB61 /* Controller */,
+				E4957D311D0E584F0016FB61 /* View */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		E4957D2D1D0E584F0016FB61 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D631D0E5C5D0016FB61 /* UIView+Extension.h */,
+				E4957D641D0E5C5D0016FB61 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E4957D2E1D0E584F0016FB61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D541D0E59BF0016FB61 /* YSRootViewController.h */,
+				E4957D551D0E59BF0016FB61 /* YSRootViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4957D311D0E584F0016FB61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4957D321D0E584F0016FB61 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D331D0E584F0016FB61 /* Controller */,
+				E4957D361D0E584F0016FB61 /* Model */,
+				E4957D371D0E584F0016FB61 /* View */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		E4957D331D0E584F0016FB61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D5D1D0E5AA80016FB61 /* YSShopViewController.h */,
+				E4957D5E1D0E5AA80016FB61 /* YSShopViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4957D361D0E584F0016FB61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4957D371D0E584F0016FB61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4957D3E1D0E591A0016FB61 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D3F1D0E598D0016FB61 /* InfinitiCollectionView */,
+				E4957D441D0E598D0016FB61 /* MMDrawerController */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E4957D3F1D0E598D0016FB61 /* InfinitiCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D401D0E598D0016FB61 /* CollectionImageCell.h */,
+				E4957D411D0E598D0016FB61 /* CollectionImageCell.m */,
+				E4957D421D0E598D0016FB61 /* CollectionImageView.h */,
+				E4957D431D0E598D0016FB61 /* CollectionImageView.m */,
+			);
+			path = InfinitiCollectionView;
+			sourceTree = "<group>";
+		};
+		E4957D441D0E598D0016FB61 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				E4957D451D0E598D0016FB61 /* MMDrawerBarButtonItem.h */,
+				E4957D461D0E598D0016FB61 /* MMDrawerBarButtonItem.m */,
+				E4957D471D0E598D0016FB61 /* MMDrawerController+Subclass.h */,
+				E4957D481D0E598D0016FB61 /* MMDrawerController.h */,
+				E4957D491D0E598D0016FB61 /* MMDrawerController.m */,
+				E4957D4A1D0E598D0016FB61 /* MMDrawerVisualState.h */,
+				E4957D4B1D0E598D0016FB61 /* MMDrawerVisualState.m */,
+				E4957D4C1D0E598D0016FB61 /* UIViewController+MMDrawerController.h */,
+				E4957D4D1D0E598D0016FB61 /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +443,7 @@
 		E4957CDA1D0E57E40016FB61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YS;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = xiaoke;
 				TargetAttributes = {
@@ -273,9 +515,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4957CED1D0E57E40016FB61 /* ViewController.m in Sources */,
+				E4957D5C1D0E5A9C0016FB61 /* YSHotViewController.m in Sources */,
+				E4957D4F1D0E598D0016FB61 /* CollectionImageView.m in Sources */,
+				E4957D621D0E5ACA0016FB61 /* YSMyViewController.m in Sources */,
+				E4957D5F1D0E5AA80016FB61 /* YSShopViewController.m in Sources */,
+				E4957D501D0E598D0016FB61 /* MMDrawerBarButtonItem.m in Sources */,
+				E4957D511D0E598D0016FB61 /* MMDrawerController.m in Sources */,
+				E4957D561D0E59BF0016FB61 /* YSRootViewController.m in Sources */,
+				E4957D521D0E598D0016FB61 /* MMDrawerVisualState.m in Sources */,
 				E4957CEA1D0E57E40016FB61 /* AppDelegate.m in Sources */,
+				E4957D531D0E598D0016FB61 /* UIViewController+MMDrawerController.m in Sources */,
+				E4957D651D0E5C5D0016FB61 /* UIView+Extension.m in Sources */,
 				E4957CE71D0E57E40016FB61 /* main.m in Sources */,
+				E4957D4E1D0E598D0016FB61 /* CollectionImageCell.m in Sources */,
+				E4957D591D0E5A8B0016FB61 /* YSHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = YueShouApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoke.YueShouApp;
@@ -427,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = YueShouApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoke.YueShouApp;

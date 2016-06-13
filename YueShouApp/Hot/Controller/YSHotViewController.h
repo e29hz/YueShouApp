@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YSHotViewController.h
 //  YueShouApp
 //
 //  Created by 鄂鸿桢 on 16/6/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface YSHotViewController : UIViewController
 
 @end
-

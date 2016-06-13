@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4051EFF1D0EACC400A9F142 /* YSZhongchouController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4051EFE1D0EACC400A9F142 /* YSZhongchouController.m */; };
+		E4051F021D0EACF300A9F142 /* YSShangchengController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4051F011D0EACF300A9F142 /* YSShangchengController.m */; };
 		E4957CE71D0E57E40016FB61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957CE61D0E57E40016FB61 /* main.m */; };
 		E4957CEA1D0E57E40016FB61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957CE91D0E57E40016FB61 /* AppDelegate.m */; };
 		E4957CF01D0E57E50016FB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4957CEE1D0E57E50016FB61 /* Main.storyboard */; };
@@ -47,6 +49,10 @@
 
 /* Begin PBXFileReference section */
 		E4051EF91D0E5EA000A9F142 /* YSPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSPrefixHeader.pch; sourceTree = "<group>"; };
+		E4051EFD1D0EACC400A9F142 /* YSZhongchouController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSZhongchouController.h; sourceTree = "<group>"; };
+		E4051EFE1D0EACC400A9F142 /* YSZhongchouController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSZhongchouController.m; sourceTree = "<group>"; };
+		E4051F001D0EACF300A9F142 /* YSShangchengController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSShangchengController.h; sourceTree = "<group>"; };
+		E4051F011D0EACF300A9F142 /* YSShangchengController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSShangchengController.m; sourceTree = "<group>"; };
 		E4957CE21D0E57E40016FB61 /* YueShouApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueShouApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4957CE61D0E57E40016FB61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4957CE81D0E57E40016FB61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +198,10 @@
 			children = (
 				E4957D571D0E5A8B0016FB61 /* YSHomeViewController.h */,
 				E4957D581D0E5A8B0016FB61 /* YSHomeViewController.m */,
+				E4051EFD1D0EACC400A9F142 /* YSZhongchouController.h */,
+				E4051EFE1D0EACC400A9F142 /* YSZhongchouController.m */,
+				E4051F001D0EACF300A9F142 /* YSShangchengController.h */,
+				E4051F011D0EACF300A9F142 /* YSShangchengController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -523,8 +533,10 @@
 				E4957D5F1D0E5AA80016FB61 /* YSShopViewController.m in Sources */,
 				E4957D501D0E598D0016FB61 /* MMDrawerBarButtonItem.m in Sources */,
 				E4957D511D0E598D0016FB61 /* MMDrawerController.m in Sources */,
+				E4051EFF1D0EACC400A9F142 /* YSZhongchouController.m in Sources */,
 				E4957D561D0E59BF0016FB61 /* YSRootViewController.m in Sources */,
 				E4957D521D0E598D0016FB61 /* MMDrawerVisualState.m in Sources */,
+				E4051F021D0EACF300A9F142 /* YSShangchengController.m in Sources */,
 				E4957CEA1D0E57E40016FB61 /* AppDelegate.m in Sources */,
 				E4957D531D0E598D0016FB61 /* UIViewController+MMDrawerController.m in Sources */,
 				E4957D651D0E5C5D0016FB61 /* UIView+Extension.m in Sources */,

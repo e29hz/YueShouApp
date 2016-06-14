@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		E4051EFF1D0EACC400A9F142 /* YSZhongchouController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4051EFE1D0EACC400A9F142 /* YSZhongchouController.m */; };
 		E4051F021D0EACF300A9F142 /* YSShangchengController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4051F011D0EACF300A9F142 /* YSShangchengController.m */; };
-		E4066F791D0F8DD3005E9F07 /* YSAdImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4066F781D0F8DD3005E9F07 /* YSAdImageView.m */; };
-		E4066F7C1D0FAA28005E9F07 /* YSHomeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E4066F7B1D0FAA28005E9F07 /* YSHomeButton.m */; };
 		E4957CE71D0E57E40016FB61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957CE61D0E57E40016FB61 /* main.m */; };
 		E4957CEA1D0E57E40016FB61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4957CE91D0E57E40016FB61 /* AppDelegate.m */; };
 		E4957CF01D0E57E50016FB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4957CEE1D0E57E50016FB61 /* Main.storyboard */; };
@@ -55,10 +53,6 @@
 		E4051EFE1D0EACC400A9F142 /* YSZhongchouController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSZhongchouController.m; sourceTree = "<group>"; };
 		E4051F001D0EACF300A9F142 /* YSShangchengController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSShangchengController.h; sourceTree = "<group>"; };
 		E4051F011D0EACF300A9F142 /* YSShangchengController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSShangchengController.m; sourceTree = "<group>"; };
-		E4066F771D0F8DD3005E9F07 /* YSAdImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSAdImageView.h; sourceTree = "<group>"; };
-		E4066F781D0F8DD3005E9F07 /* YSAdImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSAdImageView.m; sourceTree = "<group>"; };
-		E4066F7A1D0FAA28005E9F07 /* YSHomeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeButton.h; sourceTree = "<group>"; };
-		E4066F7B1D0FAA28005E9F07 /* YSHomeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeButton.m; sourceTree = "<group>"; };
 		E4957CE21D0E57E40016FB61 /* YueShouApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueShouApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4957CE61D0E57E40016FB61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4957CE81D0E57E40016FB61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -222,10 +216,6 @@
 		E4957D1D1D0E584F0016FB61 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E4066F771D0F8DD3005E9F07 /* YSAdImageView.h */,
-				E4066F781D0F8DD3005E9F07 /* YSAdImageView.m */,
-				E4066F7A1D0FAA28005E9F07 /* YSHomeButton.h */,
-				E4066F7B1D0FAA28005E9F07 /* YSHomeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -539,8 +529,6 @@
 			files = (
 				E4957D5C1D0E5A9C0016FB61 /* YSHotViewController.m in Sources */,
 				E4957D4F1D0E598D0016FB61 /* CollectionImageView.m in Sources */,
-				E4066F7C1D0FAA28005E9F07 /* YSHomeButton.m in Sources */,
-				E4066F791D0F8DD3005E9F07 /* YSAdImageView.m in Sources */,
 				E4957D621D0E5ACA0016FB61 /* YSMyViewController.m in Sources */,
 				E4957D5F1D0E5AA80016FB61 /* YSShopViewController.m in Sources */,
 				E4957D501D0E598D0016FB61 /* MMDrawerBarButtonItem.m in Sources */,

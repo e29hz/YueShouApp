@@ -15,13 +15,15 @@
 
 #define ScreenSize      [UIScreen mainScreen].bounds.size
 
-@interface YSHomeViewController ()
+@interface YSHomeViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) CollectionImageView *infiniteScrollView;
 @property (nonatomic, strong) UIScrollView *adScrollView;
 @property (nonatomic, assign) CGFloat btnY;
 @property (nonatomic, assign) CGFloat scrollY;
 @property (nonatomic, strong) UIScrollView *scrollView;
+//定时器
+@property (weak,nonatomic)NSTimer *timer;
 
 
 @end
@@ -42,9 +44,6 @@
     [self setupAdView];
     [self setUpBottomButton];
     self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.scrollY + 64);
-
-
-
 }
 #pragma mark -- 配置视图
 -(void)setUpView
@@ -133,19 +132,76 @@
     
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    NSArray *images = @[@"a1",@"a2",@"a3"];
+    NSArray *images = @[@"a1",@"a2",@"a3",@"a1",@"a2",@"a3"];
     UIScrollView *adScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(adView.frame) + 1, ScreenSize.width, 69)];
-    adScrollView.pagingEnabled = YES;
+//    adScrollView.pagingEnabled = YES;
     adScrollView.backgroundColor = [UIColor whiteColor];
+    adScrollView.showsHorizontalScrollIndicator = NO;
     [self.scrollView addSubview:adScrollView];
     for (int i = 0; i < images.count; i++) {
         UIButton *imageBtn = [[UIButton alloc] init];
+        imageBtn.tag = 200 + i;
         [imageBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@", images[i]]] forState:UIControlStateNormal];
         imageBtn.frame = CGRectMake(2 + 122 * i, 2, 120, 65);
         [adScrollView addSubview:imageBtn];
     }
-    adScrollView.contentSize = CGSizeMake(180 * images.count, 0);
+    UIButton *tempBtn = [adScrollView viewWithTag:200];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(2 + 122 * 6, 0, 120, 65)];
+    button.backgroundColor = tempBtn.backgroundColor;
+    [button.imageView setImage:tempBtn.imageView.image];
+    
+    [adScrollView addSubview:button];
+    adScrollView.contentSize = CGSizeMake(120 * (images.count - 1), 0);
     self.adScrollView = adScrollView;
+    adScrollView.tag = 100;
+    //启动定时器
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(changeView) userInfo:nil repeats:YES];
+    //为滚动视图指定代理
+    adScrollView.delegate = self;
+}
+
+#pragma mark -- 滚动视图的代理方法
+//开始拖拽的代理方法，在此方法中暂停定时器。
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    NSLog(@"正在拖拽视图，所以需要将自动播放暂停掉");
+    //setFireDate：设置定时器在什么时间启动
+    //[NSDate distantFuture]:将来的某一时刻
+    [self.timer setFireDate:[NSDate distantFuture]];
+}
+
+//视图静止时（没有人在拖拽），开启定时器，让自动轮播
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    //视图静止之后，过1.5秒在开启定时器
+    //[NSDate dateWithTimeInterval:1.5 sinceDate:[NSDate date]]  返回值为从现在时刻开始 再过1.5秒的时刻。
+    NSLog(@"开启定时器");
+    [self.timer setFireDate:[NSDate dateWithTimeInterval:1.5 sinceDate:[NSDate date]]];
+}
+
+
+//定时器的回调方法   切换界面
+- (void)changeView{
+    //得到scrollView
+    UIScrollView *scrollView = [self.view viewWithTag:100];
+    //通过改变contentOffset来切换滚动视图的子界面
+    float offset_X = scrollView.contentOffset.x;
+    //每次切换一个屏幕
+    offset_X += 120;
+    
+    //说明要从最右边的多余视图开始滚动了，最右边的多余视图实际上就是第一个视图。所以偏移量需要更改为第一个视图的偏移量。
+    if (offset_X > 90 * 5) {
+        scrollView.contentOffset = CGPointMake(0, 0);
+        
+    }
+    //得到最终的偏移量
+    CGPoint resultPoint = CGPointMake(offset_X, 0);
+    //切换视图时带动画效果
+    //最右边的多余视图实际上就是第一个视图，现在是要从第一个视图向第二个视图偏移，所以偏移量为一个屏幕宽度
+    if (offset_X > 90 * 5) {
+        [scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
+    }else{
+        [scrollView setContentOffset:resultPoint animated:YES];
+    }
+    
 }
 
 #pragma mark - 配置下部部按钮

@@ -17,12 +17,11 @@
 
 @interface YSHomeViewController ()
 
-//@property (nonatomic, strong) UITableView *tableView;
-
 @property (nonatomic, strong) CollectionImageView *infiniteScrollView;
-
+@property (nonatomic, strong) UIScrollView *adScrollView;
 @property (nonatomic, assign) CGFloat btnY;
 @property (nonatomic, assign) CGFloat scrollY;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 
 @end
@@ -33,20 +32,25 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"约手网";
-    
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    self.scrollView.panGestureRecognizer.delaysTouchesBegan = YES;
+    [self.view addSubview:self.scrollView];
+//    self.scrollView.scrollEnabled = NO;
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self setUpView];
     [self setUpTopButton];
-    
+    [self setupAdView];
     [self setUpBottomButton];
+    self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.scrollY + 64);
 
 
 
 }
 #pragma mark -- 配置视图
--(void)setUpView {
+-(void)setUpView
+{
     
-    UIButton *leftBtn=[UIButton buttonWithType:UIButtonTypeContactAdd];
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
     [leftBtn addTarget:self action:@selector(showLeftMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem=leftItem;
@@ -56,7 +60,7 @@
     CollectionImageView *infiniteScrollView = [[CollectionImageView alloc]initWithFrame:CGRectMake(0, 64, ScreenSize.width, 180) imageArray:images selectImageBlock:^(NSInteger index) {
         NSLog(@"点击的是第%ld个",(long)index);
     }];
-    [self.view addSubview:infiniteScrollView];
+    [self.scrollView addSubview:infiniteScrollView];
     self.infiniteScrollView = infiniteScrollView;
 }
 
@@ -68,7 +72,8 @@
 }
 
 #pragma mark -- 配置上部按钮
-- (void)setUpTopButton{
+- (void)setUpTopButton
+{
     
     NSArray *images = @[@"1_24",@"2_24",@"3_24",@"4_24",@"5_24",@"6_24",@"7_24",@"8_24"];
     NSArray *titles = @[@"众筹",@"征信查询",@"卡片微金融",@"便捷金融",@"科学院",@"保险服务",@"理财",@"商城"];
@@ -99,15 +104,47 @@
         } else {
             int j = i - maxCols;
             btnX = buttonStartX + (j * (buttonW + margin));
-            self.btnY = buttinStartY + ((int)(i / maxCols) * (buttonH + margin));
+            self.btnY = buttinStartY + (((int)(i / maxCols) + 1) * (buttonH + margin));
         }
         CGFloat btnY = buttinStartY + ((int)(i / maxCols) * (buttonH + margin));
         button.frame = CGRectMake(btnX, btnY, buttonW, buttonH);
         
         [self initButton:button];
         
-        [self.view addSubview:button];
+        [self.scrollView addSubview:button];
     }
+}
+
+#pragma mark - 配置广告轮播图
+- (void)setupAdView
+{
+    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(0, self.btnY + 20, ScreenSize.width, 40)];
+    adView.backgroundColor = [UIColor whiteColor];
+    [self.scrollView addSubview:adView];
+    UILabel *adLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 60, 20)];
+    [adLabel setFont:[UIFont systemFontOfSize:12]];
+    adLabel.text = @"优质商家";
+    [adView addSubview:adLabel];
+    UIButton *adButton = [[UIButton alloc] initWithFrame:CGRectMake(ScreenSize.width - 100, 10, 90, 20)];
+    [adButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
+    [adButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [adButton setTitle:@"查看所有商家" forState:UIControlStateNormal];
+    [adView addSubview:adButton];
+    
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    NSArray *images = @[@"a1",@"a2",@"a3"];
+    UIScrollView *adScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(adView.frame) + 1, ScreenSize.width, 69)];
+    adScrollView.backgroundColor = [UIColor whiteColor];
+    [self.scrollView addSubview:adScrollView];
+    for (int i = 0; i < images.count; i++) {
+        UIButton *imageBtn = [[UIButton alloc] init];
+        [imageBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@", images[i]]] forState:UIControlStateNormal];
+        imageBtn.frame = CGRectMake(2 + 122 * i, 2, 120, 65);
+        [adScrollView addSubview:imageBtn];
+    }
+    self.scrollView.contentSize = CGSizeMake(180 * images.count, 0);
+    self.adScrollView = adScrollView;
 }
 
 #pragma mark - 配置下部部按钮
@@ -121,7 +158,7 @@
     CGFloat buttonW = (self.view.bounds.size.width - 3) / maxCols;
     CGFloat buttonH = buttonW;
     CGFloat buttonStartX = 0;
-    CGFloat buttinStartY = self.btnY + buttonH + margin + 25;
+    CGFloat buttinStartY = CGRectGetMaxY(self.adScrollView.frame) + margin + 20;
     
     for (int i = 0; i < images.count; i++) {
         
@@ -141,7 +178,7 @@
         } else {
             int j = i - maxCols;
             btnX = buttonStartX + (j * (buttonW + margin));
-            self.scrollY = buttinStartY + ((int)(i / maxCols) * (buttonH + margin));
+            self.scrollY = buttinStartY + ((int)((i / maxCols) + 1) * (buttonH + margin));
 
         }
         CGFloat btnY = buttinStartY + ((int)(i / maxCols) * (buttonH + margin));
@@ -149,7 +186,7 @@
         
         [self initButton:button];
         
-        [self.view addSubview:button];
+        [self.scrollView addSubview:button];
     }
 }
 
@@ -167,12 +204,6 @@
         [self pushNextVC:shangchengController];
     }
 }
-
-//#pragma mark - TableViewDataSource
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    
-//}
 
 #pragma mark - 私有方法
 - (void)initButton:(UIButton *)btn {

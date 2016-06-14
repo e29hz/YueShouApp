@@ -10,8 +10,6 @@
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 #import "CollectionImageView.h"
-#import "YSZhongchouController.h"
-#import "YSShangchengController.h"
 #import <WebKit/WebKit.h>
 
 #define ScreenSize      [UIScreen mainScreen].bounds.size
@@ -269,7 +267,7 @@
     UIViewController *webVc = [[UIViewController alloc] init];
     CGFloat width = self.view.frame.size.width;
     CGFloat height = self.view.frame.size.height;
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     webVc.hidesBottomBarWhenPushed = YES;
     // 2.创建URL
     NSURL *url = [NSURL URLWithString:string];

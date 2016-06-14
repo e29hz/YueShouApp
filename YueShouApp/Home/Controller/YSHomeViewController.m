@@ -135,6 +135,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     NSArray *images = @[@"a1",@"a2",@"a3"];
     UIScrollView *adScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(adView.frame) + 1, ScreenSize.width, 69)];
+    adScrollView.pagingEnabled = YES;
     adScrollView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:adScrollView];
     for (int i = 0; i < images.count; i++) {
@@ -143,7 +144,7 @@
         imageBtn.frame = CGRectMake(2 + 122 * i, 2, 120, 65);
         [adScrollView addSubview:imageBtn];
     }
-    self.scrollView.contentSize = CGSizeMake(180 * images.count, 0);
+    adScrollView.contentSize = CGSizeMake(180 * images.count, 0);
     self.adScrollView = adScrollView;
 }
 

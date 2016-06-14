@@ -12,6 +12,7 @@
 #import "CollectionImageView.h"
 #import "YSZhongchouController.h"
 #import "YSShangchengController.h"
+#import <WebKit/WebKit.h>
 
 #define ScreenSize      [UIScreen mainScreen].bounds.size
 
@@ -250,15 +251,9 @@
 - (void)buttonOnClick:(UIButton *)button
 {
     if (button.tag == 0) {
-        YSZhongchouController *zhongchouController = [[YSZhongchouController alloc] init];
-        zhongchouController.hidesBottomBarWhenPushed = YES;
-
-        [self pushNextVC:zhongchouController];
+        [self loadWithView:@"http://yueshouwang.com/wap"];
     } else if (button.tag == 7) {
-        YSShangchengController *shangchengController = [[YSShangchengController alloc] init];
-        shangchengController.hidesBottomBarWhenPushed = YES;
-        
-        [self pushNextVC:shangchengController];
+        [self loadWithView:@"http://abc.yueshouwang.com/mobile"];
     }
 }
 
@@ -267,6 +262,24 @@
     btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
     [btn setTitleEdgeInsets:UIEdgeInsetsMake(btn.imageView.frame.size.height ,-btn.imageView.frame.size.width, -30.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 20.0, -btn.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
+}
+
+- (void)loadWithView:(NSString *)string
+{
+    UIViewController *webVc = [[UIViewController alloc] init];
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = self.view.frame.size.height;
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    webVc.hidesBottomBarWhenPushed = YES;
+    // 2.创建URL
+    NSURL *url = [NSURL URLWithString:string];
+    // 3.创建Request
+    NSURLRequest *request =[NSURLRequest requestWithURL:url];
+    // 4.加载网页
+    [webView loadRequest:request];
+    [webVc.view addSubview:webView];
+    [self pushNextVC:webVc];
+    
 }
 
 -(void)pushNextVC:(UIViewController *)vc{
